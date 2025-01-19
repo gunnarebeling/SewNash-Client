@@ -1,0 +1,63 @@
+.cst-bg {
+    background-color: rgba(251, 248, 70, 0.719);
+}
+.main-content {
+  margin-top: 1px; /* Adjust this value based on the height of your navbar */
+}
+.flow-header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Ensures the container shrinks to fit content */
+  }
+  
+  .datepicker-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc; /* Light gray border for the date picker */
+    border-radius: 5px;
+   
+  }
+  
+  .datepicker-input {
+    width: auto;
+    padding: 5px 0; /* Remove padding to keep the datepicker compact */
+    border: none; /* Remove input border */
+    background-color: transparent; /* Transparent background */
+  }
+  
+  .search-icon {
+    background-color: blue; /* Blue background for search icon */
+    padding: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .icon-search {
+    color: white; /* White color for the icon */
+  }
+  
+  .icon-calendar {
+    color: #5c5c5c; /* Gray color for the calendar icon */
+  }
+  
+  button.search-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+
+    padding: 0;
+  }
+  
+  button.btn:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 576px) {
+    .icon-calendar {
+        display: none;
+    }
+}

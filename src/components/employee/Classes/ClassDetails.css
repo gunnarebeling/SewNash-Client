@@ -1,0 +1,10 @@
+.custom-img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.image-container {
+    flex: 0 0 150px; /* Do not grow or shrink, fixed width */
+}
