@@ -1,4 +1,4 @@
- const _apiUrl = "/api/stripe";
+ const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/stripe";
 export const getStripeForm = (itemObj) => {
     return fetch(`${_apiUrl}`, {
         method: 'POST',

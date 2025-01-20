@@ -1,4 +1,4 @@
-const _apiUrl = "/api/session";
+const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/session";
 
 export const getSessionByClassId = (classId) => {
     return fetch(`${_apiUrl}/class/${classId}`).then(res => res.json())

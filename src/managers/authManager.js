@@ -1,4 +1,4 @@
-const _apiUrl = "/api/auth";
+const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/auth";
 
 export const login = (email, password) => {
   return fetch(_apiUrl + "/login", {

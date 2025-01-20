@@ -7,7 +7,7 @@ return {
     open: true,
     proxy: {
         "/api": {
-        target: "https://localhost:5001",
+        target: "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/",
         changeOrigin: true,
         secure: false,
         },
