@@ -6,7 +6,6 @@ import { createContext, useEffect, useState } from "react";
 
 import { AuthorizedRoute } from "./components/auth/AuthorizedRoute";
 import { Login } from "./components/auth/Login";
-import {Register} from "./components/auth/Register"
 import { tryGetLoggedInUser } from "./managers/authManager";
 import { EmployeeRoutes } from "./components/employee/EmployeeRoutes";
 import { CustomerRoutes } from "./components/customer/CustomerRoutes";
@@ -43,15 +42,7 @@ export default function App() {
           path="login"
           element={<Login setLoggedInUser={setLoggedInUser} />}
         />
-        <Route
-          path="register"
-          element={
-            <AuthorizedRoute roles={"Admin"} loggedInUser={loggedInUser}>
-
-              <Register setLoggedInUser={setLoggedInUser} />
-            </AuthorizedRoute>
-          }
-        />
+        
         <Route path="complete" element={<BookingComplete/>}/>
 
       </Routes>
