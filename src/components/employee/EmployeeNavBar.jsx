@@ -57,7 +57,7 @@ export default function EmployeeNavBar() {
               Customer
             </NavLink>
           </NavItem>
-          {loggedInUser.roles?.some(r => r === "Admin") && 
+          {loggedInUser?.role === "Admin" && 
             <NavItem className="mx-3">
               <NavLink tag={RRNavLink} onClick={toggleNavbar} to="/register">
                 Register Employee

@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/session";
+const _apiUrl = "https://localhost:7145/api/session";
 
 export const getSessionByClassId = (classId) => {
     return fetch(`${_apiUrl}/class/${classId}`).then(res => res.json())
@@ -7,19 +7,36 @@ export const getSessionById = (sessionId) => {
     return fetch(`${_apiUrl}/${sessionId}`).then(res => res.json())
 }
 export const getAllSessions = () => {
-    return fetch(_apiUrl).then(res => res.json())
+    const token = localStorage.getItem('token');
+    return fetch(_apiUrl, {
+        method: 'GET',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    }).then(res => res.json());
 }
 
 export const deleteSession = (id) => {
+    const token = localStorage.getItem('token');
     return fetch(`${_apiUrl}/${id}`, {
-        method: 'DELETE'
-    })
+        method: 'DELETE',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    });
 }
 
 export const lockUnlockSession = (id) => {
+    const token = localStorage.getItem('token');
     return fetch(`${_apiUrl}/${id}`, {
-        method: 'PUT'
-    })
+        method: 'PUT',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    });
 }
 
 export const getSessionsByDate = (date) => {

@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/photo";
+const _apiUrl = "https://localhost:7145/api/photo";
 
 export const uploadClassPhoto =  (file, classId) => {
     const formData = new FormData();
@@ -22,7 +22,12 @@ export const deletePhoto = (photoId) =>{
 }
 
 export const setMainPhoto = (classId, photoId) => {
+    const token = localStorage.getItem('token');
     return fetch(`${_apiUrl}/class/${classId}/setmain/${photoId}`, {
-        method: 'PUT'
-    })
+        method: 'PUT',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        }
+    });
 }

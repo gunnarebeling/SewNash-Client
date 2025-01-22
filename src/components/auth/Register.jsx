@@ -8,9 +8,7 @@ import { Button, FormFeedback, FormGroup, Input, Label } from "reactstrap";
 export function Register() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("")
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -31,10 +29,8 @@ export function Register() {
       const newUser = {
         firstName,
         lastName,
-        userName,
         email,
         phoneNumber,
-        address,
         password,
       };
       register(newUser).then((user) => {
@@ -100,30 +96,6 @@ export function Register() {
           invalid={!!errors.phoneNumber}
         />
         {errors.Email && <FormFeedback>{errors.phoneNumber.join(", ")}</FormFeedback>}
-      </FormGroup>
-      <FormGroup>
-        <Label>User Name</Label>
-        <Input
-          type="text"
-          value={userName}
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          invalid={!!errors.UserName}
-        />
-        {errors.UserName && <FormFeedback>{errors.UserName.join(", ")}</FormFeedback>}
-      </FormGroup>
-      <FormGroup>
-        <Label>Address</Label>
-        <Input
-          type="text"
-          value={address}
-          onChange={(e) => {
-            setAddress(e.target.value);
-          }}
-          invalid={!!errors.Address}
-        />
-        {errors.Address && <FormFeedback>{errors.Address.join(", ")}</FormFeedback>}
       </FormGroup>
       <FormGroup>
         <Label>Password</Label>

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { createContext, useEffect, useState } from "react";
 
-import { Spinner } from "reactstrap";
+
 import { AuthorizedRoute } from "./components/auth/AuthorizedRoute";
 import { Login } from "./components/auth/Login";
 import {Register} from "./components/auth/Register"
@@ -46,7 +46,7 @@ export default function App() {
         <Route
           path="register"
           element={
-            <AuthorizedRoute roles={["Admin"]} loggedInUser={loggedInUser}>
+            <AuthorizedRoute roles={"Admin"} loggedInUser={loggedInUser}>
 
               <Register setLoggedInUser={setLoggedInUser} />
             </AuthorizedRoute>

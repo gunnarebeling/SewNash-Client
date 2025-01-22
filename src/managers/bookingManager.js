@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticbeanstalk.com/api/booking";
+const _apiUrl = "https://localhost:7145/api/booking";
 
 export const PostBooking = (booking) => {
     return fetch(_apiUrl, {
@@ -12,7 +12,11 @@ export const PostBooking = (booking) => {
 
 export const deleteBooking = (id) => {
     return fetch(`${_apiUrl}/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            "Content-Type": "application/json"
+        }
     })
 }
 
@@ -20,6 +24,7 @@ export const updateBooking = (id, formData) => {
     return fetch(`${_apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
             "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
