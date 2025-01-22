@@ -1,4 +1,4 @@
-const _apiUrl = "https://localhost:7145/api/photo";
+const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticb/api/photo";
 
 export const uploadClassPhoto =  (file, classId) => {
     const formData = new FormData();

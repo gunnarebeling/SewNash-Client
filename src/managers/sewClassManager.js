@@ -1,4 +1,4 @@
-const _apiUrl = "https://localhost:7145/api/sewclass";
+const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticb/api/sewclass";
 
 export const getAllClasses = () => {
     return fetch(_apiUrl).then(res => res.json())
