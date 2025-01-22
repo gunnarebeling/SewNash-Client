@@ -61,3 +61,14 @@ export const register = (userProfile) => {
     body: JSON.stringify(userProfile),
   });
 };
+
+export const verifyUser = () => {
+  return fetch(_apiUrl + "/verify-user", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+      "Content-Type": "application/json",
+    },
+    
+  });
+}

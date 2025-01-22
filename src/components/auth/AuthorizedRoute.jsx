@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { jwtDecode } from "jwt-decode";
 import { Navigate } from "react-router-dom";
-import { verifyUser } from "../../managers/authManager";
+
 import { useEffect, useState } from "react";
+import { verifyUser } from "../../managers/authManager";
 
 
 // This component returns a Route that either display the prop element
