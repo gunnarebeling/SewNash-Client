@@ -1,5 +1,5 @@
 
-import { NavLink as RRNavLink } from "react-router-dom";
+import { NavLink as RRNavLink, useNavigate } from "react-router-dom";
 import {
 Button,
 Nav,
@@ -13,13 +13,13 @@ Collapse,
 
 import { useContext, useState } from "react";
 import { UserContext } from "../../App";
-import { logout } from "../../managers/authManager";
 import './EmployeeNavBar.css'
 
 
 export default function EmployeeNavBar() {
     const { loggedInUser, setLoggedInUser} = useContext(UserContext)
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -59,7 +59,7 @@ export default function EmployeeNavBar() {
           </NavItem>
           {loggedInUser?.role === "Admin" && 
             <NavItem className="mx-3">
-              <NavLink tag={RRNavLink} onClick={toggleNavbar} to="/register">
+              <NavLink tag={RRNavLink} onClick={toggleNavbar} to="/employee/register">
                 Register Employee
               </NavLink>
             </NavItem>
@@ -72,9 +72,10 @@ export default function EmployeeNavBar() {
                 className="logout-btn"
                 onClick={(e) => {
                     e.preventDefault();
-                    logout().then(() => {
+                    localStorage.removeItem('token');
                     setLoggedInUser(null);
-                    });
+                    navigate("/");
+                    
                 }}
                 >
                 Logout

@@ -1,3 +1,5 @@
+
+
 const _apiUrl = "https://localhost:7145/api/auth";
 
 export const login = (email, password) => {
@@ -19,9 +21,11 @@ export const login = (email, password) => {
   });
 };
 
+
+
 export const logout = () => {
-  localStorage.removeItem('token'); // Remove the token from local storage
-  return fetch(_apiUrl + "/logout");
+  localStorage.removeItem('token');
+  
 };
 
 export const tryGetLoggedInUser = () => {
@@ -59,3 +63,14 @@ export const register = (userProfile) => {
     body: JSON.stringify(userProfile),
   });
 };
+
+export const verifyUser = () => {
+  return fetch(_apiUrl + "/verify-user", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+      "Content-Type": "application/json",
+    },
+    
+  });
+}

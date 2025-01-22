@@ -7,9 +7,14 @@ import { AvailabilityCalendar } from "./availability/AvailabilityCalendar"
 import { SessionDetails } from "./sessions/SessionDetails"
 import { ClassPhotos } from "./photos/ClassPhotos"
 import { ClassDetails } from "./classes/ClassDetails"
+import { AuthorizedRoute } from "../auth/AuthorizedRoute"
+import { Register } from "../auth/Register"
+import { useContext } from "react"
+import { UserContext } from "../../App"
 
 
 export const EmployeeRoutes = () => {
+    const {loggedInUser, setLoggedInUser} = useContext(UserContext)
     return (
         <Routes>
             <Route
@@ -33,6 +38,15 @@ export const EmployeeRoutes = () => {
                         </Route>
                     </Route>
                     <Route path="session/:sessionId" element={<SessionDetails/>}/>
+                    <Route
+                        path="register"
+                        element={
+                            <AuthorizedRoute roles={"Admin"} loggedInUser={loggedInUser}>
+
+                            <Register setLoggedInUser={setLoggedInUser} />
+                            </AuthorizedRoute>
+                        }
+                        />
                 
 
             </Route>

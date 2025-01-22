@@ -47,7 +47,7 @@ export function Register() {
   };
 
   return (
-    <div className="container border border-3 bg-light bg-opacity-50 p-3 mb-3" style={{ maxWidth: "500px" }}>
+    <div className="container border border-3 mt-4 bg-light bg-opacity-50 p-3 mb-3" style={{ maxWidth: "500px" }}>
       <h3>Sign Up</h3>
       <FormGroup>
         <Label>First Name</Label>
