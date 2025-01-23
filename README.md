@@ -33,5 +33,8 @@ Deployed to AWS [Visit Site](http://sewnash-app.s3-website-us-east-1.amazonaws.c
 
 https://www.loom.com/share/180b847b0c0543b3ad659c2fe4810a88?sid=6dc702c3-859e-4c5d-83e1-22d017ac6440
 
+- If a customer wants to book by date they can click the search button or select by date button
+  https://www.loom.com/share/5c9033eb3d6c4c2f87afa1863b7be0d8?sid=2e207317-5c89-4f41-a518-f6c71285c0d1
+
 
    
