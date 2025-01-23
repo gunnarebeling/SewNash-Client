@@ -31,7 +31,7 @@ Deployed to AWS [Visit Site](http://sewnash-app.s3-website-us-east-1.amazonaws.c
 - if the customer clickes on a class it will bring them to a class detail page that displays the information about the class and a calendar to choose a date then available class sessions for that date if any
 - if the customer wants to book a class they can click on the session Where it will bring you to a page to book the class.
 
-<iframe width="560" height="315" src="https://www.loom.com/share/180b847b0c0543b3ad659c2fe4810a88?sid=6dc702c3-859e-4c5d-83e1-22d017ac6440" frameborder="0" allowfullscreen/>
+https://www.loom.com/share/180b847b0c0543b3ad659c2fe4810a88?sid=6dc702c3-859e-4c5d-83e1-22d017ac6440
 
 
    
