@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticb/api/auth";
+const _apiUrl = "http://sewnash-api-env.eba-t3mcrd2m.us-east-1.elasticbeanstalk.com/api/auth";
 
 export const login = (email, password) => {
   return fetch(_apiUrl + "/login", {
@@ -64,7 +64,7 @@ export const register = (userProfile) => {
 
 export const verifyUser = () => {
   return fetch(_apiUrl + "/verify-user", {
-    method: "POST",
+    method: "GET",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
       "Content-Type": "application/json",

@@ -47,7 +47,7 @@ export const ClassDetails = () => {
             </Table>
             <div>
 
-                <Button color="primary" onClick={() => {
+                <Button color="primary" className="me-2" onClick={() => {
                     navigate('availability')
                 }}> Availability Calendar</Button>
                 <Button  onClick={() => {

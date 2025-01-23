@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-mcb7difs.us-east-1.elasticb/api/sewclass";
+const _apiUrl = "http://sewnash-api-env.eba-t3mcrd2m.us-east-1.elasticbeanstalk.com/api/sewclass";
 
 export const getAllClasses = () => {
     return fetch(_apiUrl).then(res => res.json())

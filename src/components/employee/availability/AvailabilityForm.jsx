@@ -259,7 +259,7 @@ export const AvailabilityForm = ({ isOpen, toggle, selectedDate, sewClass, setNe
                                             
                                             
                                         />
-                                        <label>{e.fullName}</label>
+                                        <label id={e.id}  onClick={(e) => {e.preventDefault(); timeChange(e)}}>{e.fullName}</label>
                                         </DropdownItem>
                                     ))}
                                     </DropdownMenu>
@@ -280,21 +280,23 @@ export const AvailabilityForm = ({ isOpen, toggle, selectedDate, sewClass, setNe
                                             <Label>{d.name}</Label>
                                             <Dropdown isOpen={dropdownStates[d.id]} toggle={() => toggleDropdown(d.id)} className={!d.checked && 'd-none'}>
                                               <DropdownToggle caret className="btn-sm">Choose time</DropdownToggle>
-                                              <DropdownMenu >
+                                              <DropdownMenu  >
                                                 {allTimes.map((time) => (
                                                   <DropdownItem key={`${time.id}-${d.id}`} toggle={false}>
-                                                    <input
-                                                      type="checkbox"
-                                                      id={`${time.id}-${d.id}`}
-                                                      data-day={d.id}
-                                                      data-time={time.id}
-                                                      name={time.startTime}
-                                                      onChange={timeChange}
-                                                      checked={d.times.some(t => parseInt(t) === time.id)}
-                                                      
-                                                      
-                                                    />
-                                                    <label>{time.startTime}</label>
+                                                    <div className="d-flex align-items-center">
+                                                        <input
+                                                        type="checkbox"
+                                                        id={`${time.id}-${d.id}`}
+                                                        data-day={d.id}
+                                                        data-time={time.id}
+                                                        name={time.startTime}
+                                                        onChange={timeChange}
+                                                        checked={d.times.some(t => parseInt(t) === time.id)}
+                                                        
+                                                        
+                                                        />
+                                                        <label data-day={d.id} data-time={time.id} onClick={(e) => {e.preventDefault(); timeChange(e)}}>{time.startTime}</label>
+                                                    </div>
                                                   </DropdownItem>
                                                 ))}
                                               </DropdownMenu>

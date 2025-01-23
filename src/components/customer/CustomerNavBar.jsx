@@ -18,7 +18,7 @@ return (
     <Navbar className="nav-bg" light fixed="top" expand={false}>
         <NavbarBrand className="mr-auto" tag={RRNavLink} to="/">
         <img 
-          src="./src/assets/SewNash1.png" 
+          src="http://sewnash-app.s3-website-us-east-1.amazonaws.com/SewNash1.png"  
           alt="SewNash Logo" 
           className="img-fluid" 
           style={{ height: '80px' }} // Adjust height as needed

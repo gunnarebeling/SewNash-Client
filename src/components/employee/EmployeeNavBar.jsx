@@ -26,10 +26,10 @@ export default function EmployeeNavBar() {
   };
 
   return (
-    <Navbar color="light" light expand="md" fixed="top">
+    <Navbar className="nav-bg" color="light" light expand="md" fixed="top">
       <NavbarBrand className="mr-auto" tag={RRNavLink} to="/">
         <img 
-          src="./src/assets/SewNash1.png" 
+          src="http://sewnash-app.s3-website-us-east-1.amazonaws.com/SewNash1.png" 
           alt="SewNash Logo" 
           className="img-fluid" 
           style={{ height: '80px' }} 
@@ -50,11 +50,6 @@ export default function EmployeeNavBar() {
           <NavItem className="mx-3">
             <NavLink tag={RRNavLink} onClick={toggleNavbar} to="classes">
               Classes
-            </NavLink>
-          </NavItem>
-          <NavItem className="mx-3">
-            <NavLink tag={RRNavLink}  onClick={toggleNavbar} to="/">
-              Customer
             </NavLink>
           </NavItem>
           {loggedInUser?.role === "Admin" && 

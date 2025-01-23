@@ -33,7 +33,7 @@ export const CustomerHome = () => {
         <Row className="justify-content-center mb-4 mt-4">
           <Col md="8" className="text-center mt-5">
             <img 
-              src="./src/assets/SewNash1.png" 
+              src="http://sewnash-app.s3-website-us-east-1.amazonaws.com/SewNash1.png" 
               alt="SewNash Logo" 
               className="img-fluid m-3" 
               style={{ height: '200px' }} // Adjust height as needed
@@ -62,9 +62,9 @@ export const CustomerHome = () => {
                         </button>
                       }
                     />
-                <div className="search-icon rounded-end">
+                <div className="search-icon rounded-end" onClick={() => navigate('/bookbydate')}>
                   <a
-                    href="/bookbydate"
+                   
                     aria-label="Search by date"
                     className="m-2"
                   >
