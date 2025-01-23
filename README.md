@@ -10,13 +10,13 @@ Booking platform for a local sewing experience
 # Key Features
 - **Dynamic Booking System:** Users can book and pay for available time slots in real-time, eliminationg back-and-forth communication.
 - **Streamlined Management:** Providers can manage their schedules, track bookings, and even set availability directly within the platform.
-  -**Integrated Notifications:** Automated email notifications and reminders help customers and providers stay informed about sessions.
+- **Integrated Notifications:** Automated email notifications and reminders help customers and providers stay informed about sessions.
 
 # Tech Stack
--**Frontend:** React, Bootstrap
--**Backend:** .NET Core Web API, Entity Framwork
--**Database:** Postgres
--**External APIs:** Git, Stripe (payment), AWS S3 (for photo storage)
+- **Frontend:** React, Bootstrap
+- **Backend:** .NET Core Web API, Entity Framwork
+- **Database:** Postgres
+- **External APIs:** Git, Stripe (payment), AWS S3 (for photo storage)
 
 # Installation
 
