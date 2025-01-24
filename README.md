@@ -37,17 +37,17 @@ https://www.loom.com/share/180b847b0c0543b3ad659c2fe4810a88?sid=6dc702c3-859e-4c
   https://www.loom.com/share/5c9033eb3d6c4c2f87afa1863b7be0d8?sid=2e207317-5c89-4f41-a518-f6c71285c0d1
 
 # Employee View
-- when an employee logs in by clicking the Employee button they will be prompted to give there credentials which will then take them to a page that shows all the Sessions on a calendar that currently have bookings. If the user selects an employee it will show that specific employees assigned session bookings.
-- If the Employee clicks a session it will give information about the session including the bookings associated with it the Employee then can edit the session or bookings associated with it. Or delete them
+- when an employee logs in by clicking the Employee button they will be prompted to give there credentials. This will then take them to a page that shows all the Sessions on a calendar that currently have bookings. If the user selects an employee it will show that specific employees assigned session bookings.
+- If the Employee clicks a session it will give information about the session including the bookings associated with it. The Employee then can edit the session or bookings associated with the session.
 
   https://www.loom.com/share/5544a60e419149649a5d281220e03416?sid=eed863c0-c83d-4afd-a5af-595808204099
 
-- If an Employee wants to view  the classes to edit, add , or delete them they can click on the classes navbar link. Then the Employee can manage the classes how they want.
-- If an Employee selects a class they can see the class details it will also give them an option to upload a photo to the class.
+- If an Employee wants to view a list of classes, they can click on the classes navbar link. Then the Employee can manage the classes how they want.
+- If an Employee selects a class they will be navigated to a class details page.
   
   https://www.loom.com/share/e340538cd3bc440b9d44f4b38aba5274?sid=8e8b6602-7a25-41b5-8450-0c2471b28579
 
-  - If an Employee wants to edit the availability of a class in the class details they can press the availability button which will navigate them to an availability calendar where they can add sessions to classes. which will then be available for customers to book
+  - Assuming I am an employee viewing a class details page. If I select Availability the customer will be directed to an availability calendar where they can add sessions to classes. which will then be available for customers to book
  
   https://www.loom.com/share/38877d64b3704f2ebe9fa709e5016704?sid=cc906979-295f-4e44-9919-47a1333f7215
 
