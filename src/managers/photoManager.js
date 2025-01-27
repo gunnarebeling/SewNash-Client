@@ -1,5 +1,5 @@
 import imageCompression from 'browser-image-compression';
-const _apiUrl = "http://sewnash-api-env.eba-t3mcrd2m.us-east-1.elasticbeanstalk.com/api/photo";
+const _apiUrl = "https://localhost:7145/api/photo";
 
 export const uploadClassPhoto =  async (file, classId) => {
     const options = {

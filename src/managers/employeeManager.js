@@ -1,4 +1,4 @@
-const _apiUrl = "http://sewnash-api-env.eba-t3mcrd2m.us-east-1.elasticbeanstalk.com/api/employee";
+const _apiUrl = "https://localhost:7145/api/employee";
 
 export const getAllEmployees = () => {
     const token = localStorage.getItem('token');

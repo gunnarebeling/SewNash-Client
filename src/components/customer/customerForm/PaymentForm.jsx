@@ -57,6 +57,8 @@ export const PaymentForm = ({ stripeData, validationSchema, bookingForm, setErro
                       }
                       else  {
                           window.alert(`${res.error?.message}`)
+                          setIsLoading(false)
+                          navigate("/")
                         } 
                     })
           }; 
