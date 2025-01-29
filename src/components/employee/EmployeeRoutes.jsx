@@ -6,7 +6,7 @@ import { ClassList } from "./Classes/ClassList"
 import { AvailabilityCalendar } from "./availability/AvailabilityCalendar"
 import { SessionDetails } from "./sessions/SessionDetails"
 import { ClassPhotos } from "./photos/ClassPhotos"
-import { ClassDetails } from "./classes/ClassDetails"
+import { ClassDetails } from "./Classes/ClassDetails"
 
 
 export const EmployeeRoutes = () => {
