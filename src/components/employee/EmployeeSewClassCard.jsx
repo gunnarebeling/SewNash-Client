@@ -4,7 +4,7 @@ import { Button } from 'reactstrap'
 import { convertToDollars } from '../../managers/FormatFunctions'
 import './SewClassCard.css'
 import { deleteClass } from '../../managers/sewClassManager'
-import { UpdateClassForm } from './classes/UpdateClassForm'
+import { UpdateClassForm } from './Classes/UpdateClassForm'
 import { useEffect, useState } from 'react'
 
 
