@@ -2,7 +2,7 @@
 import {  PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import { Button, Container} from "reactstrap";
 
-import { PostBooking } from "../../../managers/bookingManager";
+import { PostBooking, setLockForBooking } from "../../../managers/bookingManager";
 import { convertToDollars } from "../../../managers/FormatFunctions";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -21,7 +21,7 @@ export const PaymentForm = ({ stripeData, validationSchema, bookingForm, setErro
             e.preventDefault();
             try {
                     
-                    await validationSchema.validate(bookingForm, {abortEarly: false})
+                await validationSchema.validate(bookingForm, {abortEarly: false})
             } catch (validationErrors) {
                 const formattedErrors = validationErrors.inner.reduce((acc,err) => {
                     acc[err.path] = err.message
@@ -29,14 +29,15 @@ export const PaymentForm = ({ stripeData, validationSchema, bookingForm, setErro
                 }, {})
                 setErrors(formattedErrors)
             }
-                    
-                    
-                
-                    setIsLoading(true);
-                
-                   stripe.confirmPayment({
+                       
+            setIsLoading(true);
+
+            setLockForBooking(bookingForm.sessionId).then((res) => {
+                if (res.status === 200) {
+                    console.log("lock set")
+                    stripe.confirmPayment({
                     elements ,
-    
+        
                     confirmParams: {
                         // Make sure to change this to your payment completion page
                         return_url: "http://localhost:5173/",
@@ -53,7 +54,7 @@ export const PaymentForm = ({ stripeData, validationSchema, bookingForm, setErro
                           navigate("/")
                         
                         })
-
+        
                       }
                       else  {
                           window.alert(`${res.error?.message}`)
@@ -61,6 +62,13 @@ export const PaymentForm = ({ stripeData, validationSchema, bookingForm, setErro
                           navigate("/")
                         } 
                     })
+                } else {
+                    window.alert("This class is no longer available")
+                    setIsLoading(false)
+                    navigate("/")
+                }
+            })
+        
           }; 
 
     

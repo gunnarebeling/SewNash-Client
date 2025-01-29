@@ -30,3 +30,11 @@ export const updateBooking = (id, formData) => {
         body: JSON.stringify(formData)
     })
 }
+export const setLockForBooking = (id) => {
+    return fetch(`${_apiUrl}/set-lock/${id}`, {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+}
